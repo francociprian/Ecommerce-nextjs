@@ -5,7 +5,7 @@ const AppContext = createContext({
   items: [],
   openCart: ()=>{},
   closeCart: ()=>{},
-  addItemToCart: ()=>{},
+  addItemToCart: (item)=>{},  
   getNumberOfItems: ()=>{},
 });
 
@@ -28,6 +28,7 @@ export default function StateWrapper({children}) {
       temp.push(item);
     }
     setItems([...temp]);
+    console.log(items) 
   }
   function handleNumberOfItems(){
     const total = items.reduce((acc, item)=> acc + item.qty, 0);
