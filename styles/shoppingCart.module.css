@@ -34,3 +34,15 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .clearItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
