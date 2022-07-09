@@ -4,7 +4,7 @@ import style from "../styles/shoppingCart.module.css";
 
 export default function ShoppingCart() {
   const { closeCart, emptyCart, deleteItem, items, isOpen } = useAppContext();
-
+  
   function getTotal(){
     const total = items.reduce((acc, item)=> acc + item.qty * item.price, 0)
     return total 
@@ -26,7 +26,7 @@ export default function ShoppingCart() {
         <>
           <div className={style.title}>
             <h3>Your items</h3>
-            <button onClick={handleClearCart}>Clear</button>
+            <button className={style.clear} onClick={handleClearCart}>Clear</button>
           </div>
           <div >
             {items.map(item => (
